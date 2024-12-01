@@ -10,6 +10,7 @@
 
 import React from "react";
 
+
 /**
  * Desk image
  *
@@ -31,28 +32,25 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Ecommerce",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
+      "A web application for clothing store that isOversaw the curation and management of a diverse clothing collection for an online store, enhancing product visibility and customer satisfaction. ",
     url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Java REST API",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Java REST API using springboot, that takes a json file input and gives the same for any GET method called. It focuses on pass details for driver's license."
   },
   {
-    title: "My Resume Site",
+    title: "Netflix Dashboard",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Created a dashboard for Netflix, for its dataset available online using PowerBI."
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Console based bank management system",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "Coded for a bank management system in Java where the user can cedit, debit and check balance."
   },
 ];
 
@@ -62,7 +60,7 @@ const Portfolio = () => {
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
+          <img id="deskImage"
             src={image}
             style={{ height: "90%", width: "100%", objectFit: "cover" }}
             alt={imageAltText}
@@ -70,17 +68,59 @@ const Portfolio = () => {
         </div>
         <div className="container">
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
+            <div className="project-box" key={project.title}>
+              {/* <a href={project.url} target="_blank" rel="noopener noreferrer">
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
+              </a> */}
+              <h3>{project.title}</h3>
               <p className="small">{project.description}</p>
             </div>
           ))}
         </div>
       </div>
+      <style>{`
+        /* Keyframe animation for a bouncing image */
+        @keyframes bounce {
+         0% {
+            transform: scale(0.5);
+          }
+          50% {
+            transform: scale(1.1); /* Zoom in */
+          }
+          100% {
+            transform: scale(0.5); /* Zoom out */
+          }
+        }
+
+
+        /* Apply the bounce animation */
+        #deskImage{
+          width: 300px;
+          height: 300px;
+          animation: bounce 5s infinite; /* Apply bounce animation */
+        }
+
+        
+
+        .project-box {
+          background-color: white;
+          border-radius: 8px;
+          padding: 1.5rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-box:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          cursor: pointer
+      }
+      `}</style>
+
     </section>
   );
 };
+
+
 
 export default Portfolio;

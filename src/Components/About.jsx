@@ -24,20 +24,21 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I am a final year student at Rajiv Gandhi University of Knowledge Technologies, pursuing Bachelors in the field of Computer Science.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Java",
+  "HTML, CSS & JS",
+  "React JS",
+  "REST APIs using Springboot",
+  "C programming language",
+  "Data Structures and Algorithms",
 ];
+
 
 /**
  * Use this to give more information about what you are passionate about,
@@ -45,7 +46,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
   return (
@@ -77,6 +78,23 @@ const About = () => {
           ))}
         </ul>
         <hr />
+        <p>
+          <b style={{fontWeight:"400"}}>Internship</b>: Worked as SDE intern at Cot Tetha LLC.<br></br>
+           During the internship, I worked with the digital transformation team to develop a web application that includes:
+          <ul>
+            <li>QR Code generator</li>
+            <li>Pass generator</li>
+            <li>NFC Reader</li>
+          </ul>
+          <b style={{fontWeight:"400"}}>Technology Stack:</b>
+          <ul>
+            <li>React Js</li>
+            <li>CSS</li>
+            <li>Node JS</li>
+            <li>MongoDB</li>
+          </ul>
+        </p>
+        <hr/>
         <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
       </div>
     </section>
