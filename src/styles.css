@@ -4,12 +4,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
+<<<<<<< HEAD
 
 /* In your global CSS file */
 html {
   scroll-behavior: smooth;
 }
 
+=======
+html{
+  scroll-behaviour: smooth
+}
+>>>>>>> 7c41a2ab3c7a3b55505b5f6194ee69c35b49f466
 html,
 body {
   font-family: "Montserrat", sans-serif;
